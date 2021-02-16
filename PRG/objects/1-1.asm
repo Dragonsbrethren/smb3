@@ -1,18 +1,20 @@
-    .byte $01   ; Unknown purpose
+;    .byte $01   ; Unknown purpose
+;
+;    .byte OBJ_GOOMBA, $0E, $19
+;    .byte OBJ_VENUSFIRETRAP, $16, $17
+;    .byte OBJ_GOOMBA, $21, $19
+;    .byte OBJ_REDTROOPA, $24, $16
+;    .byte OBJ_GOOMBA, $34, $18
+;    .byte OBJ_GOOMBA, $37, $18
+;    .byte OBJ_PARAGOOMBA, $3B, $18
+;    .byte OBJ_PARATROOPAGREENHOP, $53, $13
+;    .byte OBJ_PARATROOPAGREENHOP, $56, $13
+;    .byte OBJ_PARATROOPAGREENHOP, $59, $13
+;    .byte OBJ_GREENTROOPA, $5C, $19
+;    .byte OBJ_GREENPIRANHA, $70, $18
+;    .byte OBJ_GREENPIRANHA_FIRE, $74, $17
+;    .byte OBJ_REDTROOPA, $83, $17
+;    .byte OBJ_ENDLEVELCARD, $A8, $15
+;    .byte $FF   ; Terminator
 
-    .byte OBJ_GOOMBA, $0E, $19
-    .byte OBJ_VENUSFIRETRAP, $16, $17
-    .byte OBJ_GOOMBA, $21, $19
-    .byte OBJ_REDTROOPA, $24, $16
-    .byte OBJ_GOOMBA, $34, $18
-    .byte OBJ_GOOMBA, $37, $18
-    .byte OBJ_PARAGOOMBA, $3B, $18
-    .byte OBJ_PARATROOPAGREENHOP, $53, $13
-    .byte OBJ_PARATROOPAGREENHOP, $56, $13
-    .byte OBJ_PARATROOPAGREENHOP, $59, $13
-    .byte OBJ_GREENTROOPA, $5C, $19
-    .byte OBJ_GREENPIRANHA, $70, $18
-    .byte OBJ_GREENPIRANHA_FIRE, $74, $17
-    .byte OBJ_REDTROOPA, $83, $17
-    .byte OBJ_ENDLEVELCARD, $A8, $15
-    .byte $FF   ; Terminator
+hex 01 6E 0F 19 2B 12 15 72 24 15 72 26 12 A2 29 17 71 3A 19 72 3C 15 2B 3D 11 71 3E 19 72 4D 19 72 4F 19 73 52 19 6D 58 19 6D 5B 19 A2 5E 17 A2 63 17 A2 68 17 2B 78 14 2B 87 15 71 89 19 71 8B 19 A6 8D 16 41 A8 15 2B A8 19 FF
