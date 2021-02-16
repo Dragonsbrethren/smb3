@@ -278,9 +278,9 @@ LeveLoad_FixedSizeGen_TS3:
     .word LoadLevel_Corner          ;  9 - Above Ground lower-right corner tile
     .word LoadLevel_Corner          ; 10 - Underground/Hills normal lower-right corner tile
     .word LoadLevel_Corner          ; 11 - Underwater lower-right corner tile
-    .word LoadLevel_Nothing         ; 12 - NOTHING!  (Old removed? unknown?)
-    .word LoadLevel_Nothing         ; 13 - NOTHING!  (Old removed? unknown?)
-    .word LoadLevel_Nothing         ; 14 - NOTHING!  (Old removed? unknown?)
+    .word LoadLevel_IceBlocks       ; 45 - Run of ice blocks
+    .word LoadLevel_IceBlocks       ; 46 - Run of frozen munchers
+    .word LoadLevel_IceBlocks       ; 47 - Run of frozen coins
     .word LoadLevel_Door2           ; 15 - Door style 2
     .word LoadLevel_PowerBlock      ; 16 - ? block with flower
     .word LoadLevel_PowerBlock      ; 17 - ? block with leaf

@@ -220,7 +220,7 @@ LoadLevel_Generator_TS4_TS12:
     .word LoadLevel_Jelectro        ; 51 - Run of solid black tiles
     .word LoadLevel_LargeIceBlocks      ; 52 - Run of large 2x2 ice blocks
     .word LoadLevel_LittleCloudRun      ; 53 - Put in a run of those little smiling Judgem's type clouds
-    .word LoadLevel_Muncher17       ; 54 - Long run of munchers
+    .word LoadLevel_Muncher17       ; 54 - Long run of muncher
 
 
 
@@ -355,63 +355,86 @@ LL_BigWoodBlocks:
     .byte TILE4_LARGEWOOD_UR, TILE4_LARGEWOOD_LR
     .byte TILE12_SNOWGREEN_UR, TILE4_LARGEBLOCK_LM
 
-LoadLevel_BigWoodBlocks:
-    ; Backup Map_Tile_AddrL/H into Temp_Var1/2
-    LDA Map_Tile_AddrL
-    STA Temp_Var1
-    LDA Map_Tile_AddrH
-    STA Temp_Var2
-
-    LDX #$00     ; LARGEWOOD
-
-    LDA LL_ShapeDef
-    AND #$f0
-    CMP #$20
-    BEQ PRG017_A568  ; Decision to use X = 0 or X = 2 (LARGEWOOD or LARGEBLOCK)
-
-    LDX #$02     ; LARGEBLOCK
-
-PRG017_A568:
+LoadLevel_BigWoodBlocks:	; Red Mushroom
     LDA LL_ShapeDef
     AND #$0f
-    STA Temp_Var3       ; Temp_Var3 = lower 4 bits of LL_ShapeDef (width of run)
+    STA Temp_Var3      ; Temp_Var3 = lower 4 bits of LL_ShapeDef (width of run)
 
-    LDY TileAddr_Off     ; Y = TileAddr_Off
+    LDY TileAddr_Off ; Y = TileAddr_Off
 
-    LDA LL_BigWoodBlocks,X   ; Get left edge tile
+    LDA #TILE4_MUSHROOM_L  ; Left tile of bush bunch
     STA (Map_Tile_AddrL),Y   ; Store into tile mem
-    JMP PRG017_A57F     ; Jump to PRG017_A57F
+    JMP @MushDone     ; Jump to PRG017_A5EE
 
-PRG017_A57A:
-    LDA LL_BigWoodBlocks+4,X ; Get middle tile
+@MushMid:
+    LDA #TILE4_MUSHROOM_M   ; Middle tile of bush bunch
     STA (Map_Tile_AddrL),Y   ; Store into tile mem
 
-PRG017_A57F:
+@MushDone:
     JSR LoadLevel_NextColumn ; Next column
     DEC Temp_Var3       ; Temp_Var3--
-    BNE PRG017_A57A      ; While Temp_Var3 > 0, loop
+    BNE @MushMid		; While Temp_Var3 > 0, loop!
 
-    LDA LL_BigWoodBlocks+8,X ; Get right edge tile
+    LDA #TILE4_MUSHROOM_R   ; Right tile of bush bunch
     STA (Map_Tile_AddrL),Y   ; Store into tile mem
+    RTS      ; Return
+
+    ; Backup Map_Tile_AddrL/H into Temp_Var1/2
+    ;LDA Map_Tile_AddrL
+    ;STA Temp_Var1
+    ;LDA Map_Tile_AddrH
+    ;STA Temp_Var2
+
+    ;LDX #$00     ; LARGEWOOD
+
+    ;LDA LL_ShapeDef
+    ;AND #$f0
+    ;CMP #$20
+    ;BEQ PRG017_A568  ; Decision to use X = 0 or X = 2 (LARGEWOOD or LARGEBLOCK)
+
+    ;LDX #$02     ; LARGEBLOCK
+
+;PRG017_A568:
+    ;LDA LL_ShapeDef
+    ;AND #$0f
+    ;STA Temp_Var3       ; Temp_Var3 = lower 4 bits of LL_ShapeDef (width of run)
+
+    ;LDY TileAddr_Off     ; Y = TileAddr_Off
+
+    ;LDA LL_BigWoodBlocks,X   ; Get left edge tile
+    ;STA (Map_Tile_AddrL),Y   ; Store into tile mem
+    ;JMP PRG017_A57F     ; Jump to PRG017_A57F
+
+;PRG017_A57A:
+    ;LDA LL_BigWoodBlocks+4,X ; Get middle tile
+    ;STA (Map_Tile_AddrL),Y   ; Store into tile mem
+
+;PRG017_A57F:
+    ;JSR LoadLevel_NextColumn ; Next column
+    ;DEC Temp_Var3       ; Temp_Var3--
+    ;BNE PRG017_A57A      ; While Temp_Var3 > 0, loop
+
+    ;LDA LL_BigWoodBlocks+8,X ; Get right edge tile
+    ;STA (Map_Tile_AddrL),Y   ; Store into tile mem
 
     ; Go to next row by adding 16
-    LDA TileAddr_Off
-    CLC
-    ADC #16
-    STA TileAddr_Off
-    LDA Temp_Var2
-    ADC #$00
-    STA Map_Tile_AddrH
+    ;LDA TileAddr_Off
+    ;CLC
+    ;ADC #16
+    ;STA TileAddr_Off
+    ;LDA Temp_Var2
+    ;ADC #$00
+    ;STA Map_Tile_AddrH
 
-    LDA Temp_Var1
-    STA Map_Tile_AddrL ; Restore just the lower part of the video address (new line, original column)
+    ;LDA Temp_Var1
+    ;STA Map_Tile_AddrL ; Restore just the lower part of the video address (new line, original column)
 
-    INX      ; X++
-    TXA
-    AND #$01
-    BNE PRG017_A568  ; Only loop once
+    ;INX      ; X++
+    ;TXA
+    ;AND #$01
+    ;BNE PRG017_A568  ; Only loop once
 
-    RTS      ; Return
+    ;RTS      ; Return
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -441,21 +464,21 @@ PRG017_A5B8:
     DEX         ; X-- (Width decrement)
     BPL PRG017_A5B8     ; While X >= 0, loop!
 
-    LDA Level_Tileset
-    CMP #12
-    BNE PRG017_A5D8     ; If Level_Tileset <> 12 (ice level), jump to PRG017_A5D8 (RTS)
+    ; LDA Level_Tileset
+    ; CMP #12
+    ; BNE PRG017_A5D8     ; If Level_Tileset <> 12 (ice level), jump to PRG017_A5D8 (RTS)
 
     ; For ice levels only, add a snowy block beneath each bush
 
-    JSR LL17_ReturnTileAndNextRow    ; Return to beginning, then go to next row
+    ; JSR LL17_ReturnTileAndNextRow    ; Return to beginning, then go to next row
 
-    LDX Temp_Var3       ; X = Temp_Var3
-PRG017_A5CE:
-    LDA #TILE12_SNOWY_M  ; Snow block middle
-    STA (Map_Tile_AddrL),Y   ; Store into tile mem
-    JSR LoadLevel_NextColumn ; Next column
-    DEX         ; X--
-    BPL PRG017_A5CE     ; While X >= 0, loop!
+    ; LDX Temp_Var3       ; X = Temp_Var3
+; PRG017_A5CE:
+    ; LDA #TILE12_SNOWY_M  ; Snow block middle
+    ; STA (Map_Tile_AddrL),Y   ; Store into tile mem
+    ; JSR LoadLevel_NextColumn ; Next column
+    ; DEX         ; X--
+    ; BPL PRG017_A5CE     ; While X >= 0, loop!
 
 PRG017_A5D8:
     RTS      ; Return

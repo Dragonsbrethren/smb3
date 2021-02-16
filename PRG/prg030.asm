@@ -5898,9 +5898,9 @@ PRG030_9F0D:
     RTS      ; Return
 
     ; Probably unused space
-    .byte $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff
-    .byte $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff
-    .byte $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff
+    ; .byte $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff
+    ; .byte $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff
+    ; .byte $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff, $ff
 
 
 PRG030_SUB_9F40:
@@ -5911,7 +5911,7 @@ PRG030_SUB_9F40:
     JMP PRG031_F499
 
     ; Filler space
-    .byte $ff, $ff, $ff, $ff, $ff
+    ; .byte $ff, $ff, $ff, $ff, $ff
 
     ; Sub part of A0 mode of IRQ
 PRG030_SUB_9F50:
@@ -5929,8 +5929,8 @@ PRG030_9F52:
     RTS      ; Return
 
     ; Probably unused space
-    .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
-    .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    ; .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    ; .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
 
 IntIRQ_32PixelPartition_Part5:
 
@@ -5951,7 +5951,7 @@ PRG030_9F80:
     JMP PRG031_FA3C  ; Jump to PRG031_FA3C
 
     ; Unused space
-    .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    ; .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
 
 IntIRQ_32PixelPartition_Part2:  ; $9FA0
     LDA Update_Request

@@ -20,12 +20,13 @@ Tile_Layout_TS1:
     ; I.e. tiles starting at index $00, $40, $80, $C0 are each on that respective palette
 
     ; Upper left 8x8 pattern per tile
+	; TODO: Just include this as a binary from a hacked SMB3 ROM, this format is attrocious...
     .byte $FC, $3B, $FF, $05, $05, $E8, $05, $03, $3C, $3C, $3C, $3D, $FC, $03, $3C, $FC ; Tiles $00 - $0F
     .byte $44, $48, $4C, $40, $42, $5E, $FC, $FC, $FC, $FC, $FC, $22, $FC, $38, $21, $05 ; Tiles $10 - $1F
     .byte $28, $05, $05, $2D, $2F, $13, $00, $13, $FF, $FF, $FF, $FF, $10, $10, $B8, $B8 ; Tiles $20 - $2F
     .byte $B8, $B8, $BC, $FD, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; Tiles $30 - $3F
     .byte $DC, $05, $FC, $FC, $05, $05, $05, $03, $3C, $3C, $3C, $3D, $FC, $03, $3C, $FC ; Tiles $40 - $4F
-    .byte $13, $00, $13, $01, $62, $0A, $66, $01, $62, $FF, $FF, $FF, $FF, $FF, $FF, $D8 ; Tiles $50 - $5F
+    .byte $13, $00, $13, $60, $60, $60, $60, $60, $60, $FF, $FF, $FF, $FF, $FF, $FF, $D8 ; Tiles $50 - $5F
     .byte $98, $98, $98, $98, $98, $98, $92, $B4, $B4, $B4, $B4, $B4, $B4, $B4, $B4, $B4 ; Tiles $60 - $6F
     .byte $B4, $B8, $C0, $C0, $C0, $C0, $A4, $EC, $E4, $C0, $D5, $B2, $FF, $FF, $FF, $FF ; Tiles $70 - $7F
     .byte $05, $FF, $FF, $FF, $FF, $C4, $50, $03, $3C, $3C, $3C, $3D, $FC, $03, $3C, $FC ; Tiles $80 - $8F
@@ -43,7 +44,7 @@ Tile_Layout_TS1:
     .byte $FD, $2B, $06, $06, $06, $18, $58, $18, $FF, $FF, $FF, $FF, $24, $24, $B9, $B9 ; Tiles $20 - $2F
     .byte $B9, $B9, $BD, $FD, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; Tiles $30 - $3F
     .byte $DD, $06, $FC, $FC, $06, $06, $06, $35, $37, $37, $16, $5B, $FC, $23, $16, $FC ; Tiles $40 - $4F
-    .byte $18, $58, $18, $60, $62, $5A, $66, $60, $62, $FF, $FF, $FF, $FF, $FF, $FF, $D9 ; Tiles $50 - $5F
+    .byte $18, $58, $18, $62, $62, $62, $62, $62, $62, $FF, $FF, $FF, $FF, $FF, $FF, $D9 ; Tiles $50 - $5F
     .byte $99, $99, $99, $99, $99, $99, $93, $B5, $B5, $B5, $B5, $B5, $B5, $B5, $B5, $B5 ; Tiles $60 - $6F
     .byte $B5, $B9, $C1, $C1, $C1, $C1, $A5, $ED, $E4, $C1, $B2, $B2, $FF, $FF, $FF, $FF ; Tiles $70 - $7F
     .byte $06, $FF, $FF, $FF, $FF, $C4, $51, $35, $37, $37, $16, $5B, $FC, $23, $16, $FC ; Tiles $80 - $8F
@@ -61,7 +62,7 @@ Tile_Layout_TS1:
     .byte $29, $07, $2C, $2E, $07, $12, $12, $02, $FF, $FF, $FF, $FF, $11, $11, $BA, $BA ; Tiles $20 - $2F
     .byte $BA, $BA, $BE, $FD, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; Tiles $30 - $3F
     .byte $DE, $07, $FC, $FC, $07, $07, $07, $37, $04, $37, $37, $3D, $3D, $37, $04, $37 ; Tiles $40 - $4F
-    .byte $12, $12, $02, $01, $63, $01, $63, $0B, $0D, $FF, $FF, $FF, $FF, $FF, $FF, $DA ; Tiles $50 - $5F
+    .byte $12, $12, $02, $61, $61, $61, $61, $61, $61, $FF, $FF, $FF, $FF, $FF, $FF, $DA ; Tiles $50 - $5F
     .byte $9A, $9A, $9A, $9A, $9A, $9A, $CA, $B6, $B6, $B6, $B6, $B6, $B6, $B6, $B6, $B6 ; Tiles $60 - $6F
     .byte $B6, $BA, $C2, $C2, $C2, $C2, $A6, $EE, $E5, $C2, $D5, $B2, $FF, $FF, $FF, $FF ; Tiles $70 - $7F
     .byte $07, $FF, $FF, $FF, $FF, $C6, $56, $37, $04, $37, $37, $3D, $3D, $37, $04, $37 ; Tiles $80 - $8F
@@ -79,7 +80,7 @@ Tile_Layout_TS1:
     .byte $FD, $08, $08, $08, $08, $17, $19, $59, $FF, $FF, $FF, $FF, $39, $39, $BB, $BB ; Tiles $20 - $2F
     .byte $BB, $BB, $BF, $FD, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; Tiles $30 - $3F
     .byte $DF, $08, $FC, $FC, $08, $08, $08, $3C, $36, $3C, $34, $3D, $3D, $34, $25, $34 ; Tiles $40 - $4F
-    .byte $17, $19, $59, $61, $63, $61, $63, $0C, $0D, $FF, $FF, $FF, $FF, $FF, $FF, $DB ; Tiles $50 - $5F
+    .byte $17, $19, $59, $63, $63, $63, $63, $63, $63, $FF, $FF, $FF, $FF, $FF, $FF, $DB ; Tiles $50 - $5F
     .byte $9B, $9B, $9B, $9B, $9B, $9B, $CB, $B7, $B7, $B7, $B7, $B7, $B7, $B7, $B7, $B7 ; Tiles $60 - $6F
     .byte $B7, $BB, $C3, $C3, $C3, $C3, $A7, $EF, $E5, $C3, $B2, $B2, $FF, $FF, $FF, $FF ; Tiles $70 - $7F
     .byte $08, $FF, $FF, $FF, $FF, $C6, $57, $3C, $36, $3C, $34, $3D, $3D, $34, $25, $34 ; Tiles $80 - $8F
