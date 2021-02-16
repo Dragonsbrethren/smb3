@@ -4038,10 +4038,13 @@ TILE4_LONGCLOUD_LR  = $21   ; Long cloud lower right
 
 TILE4_FATTRUNK      = $47   ; Fat trunk (?) tile
 
-TILE4_LONGWOOD_L    = $4A   ; Long wooden block, left
-TILE4_LONGWOOD_M    = $4B   ; Long wooden block, middle
-TILE4_LONGWOOD_R    = $4C   ; Long wooden block, right
+TILE4_LONGWOOD_L    = $22 ;4A   ; Long wooden block, left
+TILE4_LONGWOOD_M    = $23 ;4B   ; Long wooden block, middle
+TILE4_LONGWOOD_R    = $24 ;4C   ; Long wooden block, right
 
+TILE4_MUSHROOM_L	= $22	; Large red mushroom cap, left
+TILE4_MUSHROOM_M	= $23	; Large red mushroom cap, middle
+TILE4_MUSHROOM_R	= $24   ; Large red mushroom cap, right
 TILE4_LARGEWOOD_UL  = $4D   ; Large wooden block, upper left
 TILE4_LARGEWOOD_UM  = $4E   ; Large wooden block, upper middle
 TILE4_LARGEWOOD_UR  = $4F   ; Large wooden block, upper right
@@ -4467,9 +4470,9 @@ TILE12_LARGEICEBLOCK_LR = $39   ; Large 2x2 ice block, lower right
 
 TILE12_ICEBLOCK     = $3A   ; Ice block
 
-TILE12_GROUND_L     = $4A   ; Solid bottom ground left
-TILE12_GROUND_M     = $4B   ; Solid bottom ground middle
-TILE12_GROUND_R     = $4C   ; Solid bottom ground right
+TILE12_GROUND_L     = $22 ;$4A   ; Solid bottom ground left
+TILE12_GROUND_M     = $23 ;$4B   ; Solid bottom ground middle
+TILE12_GROUND_R     = $24 ;$4C   ; Solid bottom ground right
 
 TILE12_FROZENCOIN   = $55   ; Frozen coin
 TILE12_FROZENMUNCHER    = $56   ; Frozen muncher
@@ -4879,12 +4882,12 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr005.chr"
     .incbin "CHR/chr006.chr"
     .incbin "CHR/chr007.chr"
-    .incbin "CHR/chr008.chr"
-    .incbin "CHR/chr009.chr"
+    .incbin "CHR/plains1.chr"		;008
+    .incbin "CHR/plains2.chr"		;009
     .incbin "CHR/chr010.chr"
     .incbin "CHR/chr011.chr"
-    .incbin "CHR/chr012.chr"
-    .incbin "CHR/chr013.chr"
+    .incbin "CHR/high1.chr"			;012
+    .incbin "CHR/high2.chr"			;013
     .incbin "CHR/chr014.chr"
     .incbin "CHR/chr015.chr"
     .incbin "CHR/chr016.chr"
@@ -4895,8 +4898,8 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr021.chr"
     .incbin "CHR/chr022.chr"
     .incbin "CHR/chr023.chr"
-    .incbin "CHR/chr024.chr"
-    .incbin "CHR/chr025.chr"
+    .incbin "CHR/ice1.chr"			;024
+    .incbin "CHR/ice2.chr"			;025
     .incbin "CHR/chr026.chr"
     .incbin "CHR/chr027.chr"
     .incbin "CHR/chr028.chr"
@@ -4963,10 +4966,10 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr089.chr"
     .incbin "CHR/chr090.chr"
     .incbin "CHR/chr091.chr"
-    .incbin "CHR/chr092.chr"
-    .incbin "CHR/chr093.chr"
-    .incbin "CHR/chr094.chr"
-    .incbin "CHR/chr095.chr"
+    .incbin "CHR/status1.chr"		;092
+    .incbin "CHR/status2.chr"		;093
+    .incbin "CHR/status3.chr"		;094
+    .incbin "CHR/status4.chr"		;095
     .incbin "CHR/chr096.chr"
     .incbin "CHR/chr097.chr"
     .incbin "CHR/chr098.chr"
@@ -4975,12 +4978,12 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr101.chr"
     .incbin "CHR/chr102.chr"
     .incbin "CHR/chr103.chr"
-    .incbin "CHR/chr104.chr"
-    .incbin "CHR/chr105.chr"
+    .incbin "CHR/plains-alt1.chr"	;104
+    .incbin "CHR/plains-alt2.chr"	;105
     .incbin "CHR/chr106.chr"
     .incbin "CHR/chr107.chr"
-    .incbin "CHR/chr108.chr"
-    .incbin "CHR/chr109.chr"
+    .incbin "CHR/grass1.chr"		;108
+    .incbin "CHR/grass2.chr"		;109
     .incbin "CHR/chr110.chr"
     .incbin "CHR/chr111.chr"
     .incbin "CHR/chr112.chr"
