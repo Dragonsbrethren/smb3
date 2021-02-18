@@ -1,3 +1,5 @@
+org $A7D0, $FF
+
 W302L:      .include "PRG/levels/HighUp/3-2.asm"        ; 3-2
 W302_EndL:  .include "PRG/levels/HighUp/3-2End.asm"     ; 3-2 Exit
 W306L:      .include "PRG/levels/HighUp/3-6.asm"        ; 3-6
