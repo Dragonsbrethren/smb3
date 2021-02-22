@@ -1615,6 +1615,7 @@ PalSet_Desert:
     .byte $22, $0F, $30, $3C, $22, $0F, $36, $27, $22, $0F, $2A, $1A, $22, $0F, $31, $12    ; BG Pal 7
 
     .byte $FF, $16, $36, $0F, $FF, $0F, $30, $16, $FF, $0F, $30, $2A, $FF, $0F, $36, $27    ; SPR Pal 0 (8)
+	hex FF 16 36 0F  FF 0F 30 16  FF 0F 30 2A  FF 0F 30 36	; SPR Pal 1 - Tropical Island
     .byte $FF, $16, $36, $0F, $FF, $0F, $30, $16, $FF, $0F, $36, $14, $FF, $0F, $36, $27    ; SPR Pal 1 (9)
     .byte $FF, $16, $36, $0F, $FF, $0F, $30, $16, $FF, $0F, $17, $27, $FF, $0F, $36, $27    ; SPR Pal 2 (10)
     .byte $FF, $16, $36, $0F, $FF, $0C, $30, $16, $FF, $0C, $30, $2C, $FF, $0C, $30, $00    ; SPR Pal 3 (11)

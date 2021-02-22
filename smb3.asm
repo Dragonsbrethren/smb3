@@ -4894,16 +4894,16 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr017.chr"
     .incbin "CHR/chr018.chr"
     .incbin "CHR/chr019.chr"
-    .incbin "CHR/chr020.chr"
-    .incbin "CHR/chr021.chr"
-    .incbin "CHR/chr022.chr"
-    .incbin "CHR/chr023.chr"
+    .incbin "CHR/world1.chr"		;020
+    .incbin "CHR/world2.chr"		;021
+    .incbin "CHR/world3.chr"		;022
+    .incbin "CHR/world4.chr"		;023
     .incbin "CHR/ice1.chr"			;024
     .incbin "CHR/ice2.chr"			;025
     .incbin "CHR/chr026.chr"
     .incbin "CHR/chr027.chr"
-    .incbin "CHR/chr028.chr"
-    .incbin "CHR/chr029.chr"
+    .incbin "CHR/cave1.chr"			;028
+    .incbin "CHR/cave2.chr"			;029
     .incbin "CHR/chr030.chr"
     .incbin "CHR/chr031.chr"
     .incbin "CHR/chr032.chr"
@@ -4922,8 +4922,8 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr045.chr"
     .incbin "CHR/chr046.chr"
     .incbin "CHR/chr047.chr"
-    .incbin "CHR/chr048.chr"
-    .incbin "CHR/chr049.chr"
+    .incbin "CHR/desert1.chr"		;048
+    .incbin "CHR/desert2.chr"		;049
     .incbin "CHR/chr050.chr"
     .incbin "CHR/chr051.chr"
     .incbin "CHR/chr052.chr"
@@ -4962,8 +4962,8 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr085.chr"
     .incbin "CHR/chr086.chr"
     .incbin "CHR/chr087.chr"
-    .incbin "CHR/chr088.chr"
-    .incbin "CHR/chr089.chr"
+    .incbin "CHR/vertwater1.chr"	;088
+    .incbin "CHR/vertwater2.chr"	;089
     .incbin "CHR/chr090.chr"
     .incbin "CHR/chr091.chr"
     .incbin "CHR/status1.chr"		;092
