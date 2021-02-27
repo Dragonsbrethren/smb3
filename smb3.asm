@@ -4936,8 +4936,8 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr059.chr"
     .incbin "CHR/chr060.chr"
     .incbin "CHR/chr061.chr"
-    .incbin "CHR/chr062.chr"
-    .incbin "CHR/chr063.chr"
+    .incbin "CHR/anim1-1.chr"		;062
+    .incbin "CHR/anim2-1.chr"		;063
     .incbin "CHR/chr064.chr"
     .incbin "CHR/chr065.chr"
     .incbin "CHR/chr066.chr"
@@ -4970,14 +4970,14 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/status2.chr"		;093
     .incbin "CHR/status3.chr"		;094
     .incbin "CHR/status4.chr"		;095
-    .incbin "CHR/chr096.chr"
-    .incbin "CHR/chr097.chr"
-    .incbin "CHR/chr098.chr"
-    .incbin "CHR/chr099.chr"
-    .incbin "CHR/chr100.chr"
-    .incbin "CHR/chr101.chr"
-    .incbin "CHR/chr102.chr"
-    .incbin "CHR/chr103.chr"
+    .incbin "CHR/anim1-2.chr"		;096
+    .incbin "CHR/anim2-2.chr"		;097
+    .incbin "CHR/anim1-3.chr"		;098
+    .incbin "CHR/anim2-3.chr"		;099
+    .incbin "CHR/anim1-4.chr"		;100
+    .incbin "CHR/anim2-4.chr"		;101
+    .incbin "CHR/anim1-5.chr"		;102
+    .incbin "CHR/anim2-5.chr"		;103
     .incbin "CHR/plains-alt1.chr"	;104
     .incbin "CHR/plains-alt2.chr"	;105
     .incbin "CHR/chr106.chr"
