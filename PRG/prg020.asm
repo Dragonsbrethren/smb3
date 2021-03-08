@@ -2089,7 +2089,7 @@ PRG020_AD51:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; LoadLevel_DesertTree
 ;
-; Builds a desert tree with a three tile tall trunk
+; Builds a desert tree with a trunk that extends to the ground
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 LL_DesertTree:  .byte TILE9_TREETOP_RIGHT, TILE9_TREETOP_MIDDLE, TILE9_TREETOP_LEFT
 
@@ -2132,7 +2132,7 @@ PRG020_AD64:
     INY     ; Next column
     TYA
     AND #$0f
-    BNE PRG020_AD9C  ; If crossed screen boundary, jump to PRG020_AD9C
+    BNE @SkyCheck  ; If crossed screen boundary, jump to PRG020_AD9C
 
     ; Go to next screen by adding $1B0
     LDA Map_Tile_AddrL
@@ -2148,13 +2148,15 @@ PRG020_AD64:
     AND #$f0
     TAY
 
-    ; Three tall trunk
-PRG020_AD9C:
-    LDX #$02     ; X = 2
+    ; Variable height trunk
+@SkyCheck:
+	LDA (Map_Tile_AddrL),Y	; Get tile here
+	CMP #TILE9_SKY			; Is this sky?
+	BNE @TreeDone			; If not, RTS
 
-PRG020_AD9E:
-    LDA #TILE9_TREE     ; Tree trunk tile
-    STA (Map_Tile_AddrL),Y   ; Store into tile mem
+@DrawTrunk:
+    LDA #TILE9_TREE     	; Tree trunk tile
+    STA (Map_Tile_AddrL),Y	; Store into tile mem
 
     TYA
     CLC
@@ -2164,9 +2166,9 @@ PRG020_AD9E:
     ADC #$00
     STA Map_Tile_AddrH
 
-    DEX      ; X--
-    BPL PRG020_AD9E  ; While X >= 0, loop
+    JMP @SkyCheck			; loop
 
+@TreeDone
     RTS      ; Return
 
 
