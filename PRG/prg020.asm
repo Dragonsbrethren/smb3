@@ -21,7 +21,7 @@ Tile_Layout_TS9:
 
     ; Upper left 8x8 pattern per tile
     .byte $FC, $7F, $FF, $05, $05, $E8, $25, $25, $05, $29, $05, $4B, $05, $4C, $4B, $4E ; Tiles $00 - $0F
-    .byte $FD, $FE, $00, $02, $FC, $23, $FF, $FC, $FC, $FC, $FC, $46, $FC, $47, $1D, $FF ; Tiles $10 - $1F
+    .byte $FD, $FE, $00, $02, $25, $27, $FC, $FC, $FC, $FC, $FC, $46, $FC, $47, $1D, $23 ; Tiles $10 - $1F
     .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $20, $FF, $B8, $B8 ; Tiles $20 - $2F
     .byte $B8, $B8, $BC, $2E, $2D, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; Tiles $30 - $3F
     .byte $DC, $05, $FC, $FE, $05, $05, $05, $25, $25, $05, $29, $05, $05, $35, $FD, $FD ; Tiles $40 - $4F
@@ -39,7 +39,7 @@ Tile_Layout_TS9:
 
     ; Lower left 8x8 pattern per tile
     .byte $FC, $7E, $FF, $06, $D6, $E9, $27, $27, $06, $2B, $06, $4B, $06, $4D, $4B, $4F ; Tiles $00 - $0F
-    .byte $FD, $FE, $04, $0A, $22, $FC, $FF, $FC, $47, $0F, $FC, $46, $FC, $FC, $FC, $FF ; Tiles $10 - $1F
+    .byte $FD, $FE, $04, $0A, $29, $2B, $FC, $FC, $47, $0F, $FC, $46, $FC, $FC, $FC, $23 ; Tiles $10 - $1F
     .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $30, $FF, $B9, $B9 ; Tiles $20 - $2F
     .byte $B9, $B9, $BD, $2F, $2D, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; Tiles $30 - $3F
     .byte $DD, $06, $FC, $FE, $06, $06, $06, $27, $27, $06, $28, $06, $34, $35, $FD, $1E ; Tiles $40 - $4F
@@ -57,7 +57,7 @@ Tile_Layout_TS9:
 
     ; Upper right 8x8 pattern per tile
     .byte $FC, $FC, $FF, $07, $07, $EA, $26, $07, $26, $07, $2A, $4B, $4D, $4B, $4F, $4B ; Tiles $00 - $0F
-    .byte $FD, $FE, $01, $03, $22, $FC, $FF, $FC, $FC, $FC, $46, $FC, $1C, $47, $FC, $FF ; Tiles $10 - $1F
+    .byte $FD, $FE, $01, $03, $26, $28, $22, $FC, $FC, $FC, $46, $FC, $1C, $47, $FC, $FC ; Tiles $10 - $1F
     .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $21, $FF, $BA, $BA ; Tiles $20 - $2F
     .byte $BA, $BA, $BE, $2E, $2D, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; Tiles $30 - $3F
     .byte $DE, $07, $FC, $FE, $07, $07, $07, $26, $07, $26, $07, $2A, $34, $35, $1F, $1F ; Tiles $40 - $4F
@@ -75,7 +75,7 @@ Tile_Layout_TS9:
 
     ; Lower right 8x8 pattern per tile
     .byte $FC, $FC, $FF, $08, $D6, $EB, $28, $08, $28, $08, $2C, $4B, $4C, $4B, $4E, $4B ; Tiles $00 - $0F
-    .byte $FD, $FE, $09, $0B, $FC, $23, $FF, $0D, $47, $FC, $46, $FC, $FC, $FC, $FC, $FF ; Tiles $10 - $1F
+    .byte $FD, $FE, $09, $0B, $2A, $2C, $22, $0D, $47, $FC, $46, $FC, $FC, $FC, $FC, $FC ; Tiles $10 - $1F
     .byte $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $31, $FF, $BB, $BB ; Tiles $20 - $2F
     .byte $BB, $BB, $BF, $2F, $2D, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; Tiles $30 - $3F
     .byte $DF, $08, $FC, $FE, $08, $08, $08, $28, $08, $28, $08, $2C, $35, $35, $1F, $24 ; Tiles $40 - $4F
