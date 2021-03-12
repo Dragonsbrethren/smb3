@@ -1,27 +1,10 @@
-; Original address was $B62B
-; 2-1 bonus rooms
-    .word W201L ; Alternate level layout
-    .word W201O ; Alternate object layout
-    .byte LEVEL1_SIZE_04 | LEVEL1_YSTART_170
-    .byte LEVEL2_BGPAL_03 | LEVEL2_OBJPAL_08 | LEVEL2_XSTART_18
-    .byte LEVEL3_TILESET_09 | LEVEL3_VSCROLL_LOCKED | LEVEL3_PIPENOTEXIT
+; Fishy Fortress Top
+    .word W3F2_AltL   ; Alternate level layout
+    .word W3F2_AltO   ; Alternate object layout
+    .byte LEVEL1_SIZE_05 | LEVEL1_YSTART_180
+    .byte LEVEL2_BGPAL_01 | LEVEL2_OBJPAL_09 | LEVEL2_XSTART_18
+    .byte LEVEL3_TILESET_02 | LEVEL3_VSCROLL_LOCKLOW | LEVEL3_PIPENOTEXIT
     .byte 9 & %00011111 | LEVEL4_INITACT_NOTHING
-    .byte LEVEL5_BGM_UNDERGROUND | LEVEL5_TIME_300
+    .byte LEVEL5_BGM_FORTRESS | LEVEL5_TIME_300
 
-    .byte $2E, $00, $4F, $2F, $00, $40, $30, $00, $40, $31, $00, $40, $32, $00, $40, $33
-    .byte $00, $40, $34, $00, $40, $35, $00, $40, $36, $00, $40, $37, $00, $40, $38, $00
-    .byte $40, $39, $00, $40, $2F, $0F, $40, $30, $0F, $40, $31, $0F, $40, $32, $0F, $40
-    .byte $33, $0F, $40, $34, $0F, $40, $35, $0F, $40, $36, $0F, $40, $37, $0F, $40, $38
-    .byte $0F, $40, $39, $0F, $40, $3A, $00, $4F, $59, $07, $08, $55, $04, $57, $56, $04
-    .byte $57, $2F, $02, $D1, $38, $0B, $91, $E0, $12, $97, $2E, $10, $4F, $2F, $10, $4F
-    .byte $30, $10, $4F, $31, $10, $4F, $32, $10, $4F, $33, $10, $4F, $34, $10, $4F, $35
-    .byte $10, $4F, $36, $10, $4F, $37, $10, $4F, $38, $10, $4F, $39, $10, $4F, $3A, $10
-    .byte $4F, $2E, $20, $4F, $3A, $20, $4F, $2F, $20, $40, $30, $20, $40, $31, $20, $40
-    .byte $32, $20, $40, $33, $20, $40, $34, $20, $40, $35, $20, $40, $36, $20, $40, $37
-    .byte $20, $40, $38, $20, $40, $39, $20, $40, $2F, $2F, $40, $30, $2F, $40, $31, $2F
-    .byte $40, $32, $2F, $40, $33, $2F, $40, $34, $2F, $40, $35, $2F, $40, $36, $2F, $40
-    .byte $37, $2F, $40, $38, $2F, $40, $39, $2F, $40, $2F, $22, $C1, $2F, $2C, $D1, $34
-    .byte $22, $41, $36, $24, $42, $38, $28, $42, $57, $29, $08, $2E, $30, $47, $2F, $30
-    .byte $47, $30, $30, $47, $31, $30, $47, $32, $30, $47, $33, $30, $47, $34, $30, $47
-    .byte $35, $30, $47, $36, $30, $47, $37, $30, $47, $38, $30, $47, $39, $30, $47, $3A
-    .byte $30, $47, $E2, $61, $E9, $FF
+    hex 0B 14 0A 0C 06 0A 10 13 0A 10 01 0A 0F 0C 0A 37 15 A1 0F 18 0A 10 23 0A 0D 2A 0A 0E 33 0A 10 39 0A 0F 46 0A 0B 41 0A 0A 4C 0A 06 95 0A 03 9F 0A 08 A3 0A 19 12 70 19 10 60 1A 10 60 17 10 70 19 16 70 17 18 70 19 1A 70 19 1E 70 17 20 70 19 22 70 19 26 70 17 28 70 19 2A 70 19 2E 70 17 30 70 19 32 70 19 36 70 17 38 70 19 3A 60 1A 3A 60 7A 00 9F 37 35 91 7A 3C 93 7A 40 9F 33 10 0F 33 1C 83 33 24 83 33 2C 83 33 11 21 33 39 00 33 3A 04 0D 1D 0A 12 0B 04 15 08 04 13 04 04 17 01 04 17 3C 04 14 40 04 16 45 04 11 49 04 11 4D 04 E3 42 C2 FF

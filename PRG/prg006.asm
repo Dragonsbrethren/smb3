@@ -210,6 +210,7 @@ W2HBO:      .include "PRG/objects/W2HBO.asm"    ; World 2 Boomerang Bro
 Unused8_EndO:   .include "PRG/objects/Unused8E.asm" ; "Unused level 8" exit area
 W709O:      .include "PRG/objects/7-9.asm"  ; 7-9
 W201O:      .include "PRG/objects/2-1.asm"  ; 2-1
+W201_BonusO:	.include "PRG/objects/2-1Bonus.asm"  ; 2-1 Bonus
 W205O:      .include "PRG/objects/2-5.asm"  ; 2-5
 W203O:      .include "PRG/objects/2-3.asm"  ; 2-3
 W20FO:      .include "PRG/objects/2-F.asm"  ; World 2 Fortress
