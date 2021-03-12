@@ -1,12 +1,1 @@
-    .byte $00   ; Unknown purpose
-
-    .byte OBJ_BOOSTRETCH_FLIP, $2A, $17
-    .byte OBJ_BOOSTRETCH_FLIP, $2D, $13
-    .byte OBJ_BOOSTRETCH, $2D, $15
-    .byte OBJ_BOOSTRETCH, $30, $11
-    .byte OBJ_BOOSTRETCH_FLIP, $3A, $15
-    .byte OBJ_BOOSTRETCH, $3D, $13
-    .byte OBJ_BOOSTRETCH_FLIP, $42, $18
-    .byte OBJ_BOOSTRETCH_FLIP, $43, $13
-    .byte OBJ_BOOSTRETCH, $45, $16
-    .byte $FF   ; Terminator
+hex 01 D3 00 50 2D 00 19 6C 11 15 6C 21 16 6C 31 16 6E 38 14 B4 40 19 6E 6C 16 FF
