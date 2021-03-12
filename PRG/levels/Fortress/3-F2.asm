@@ -2,7 +2,7 @@
 ; World 3 2nd Fortress entrance and second part
     .word W3F2_AltL ; Alternate level layout
     .word W3F2_AltO ; Alternate object layout
-    .byte LEVEL1_SIZE_05 | LEVEL1_YSTART_020
+    .byte LEVEL1_SIZE_05 | LEVEL1_YSTART_140
     .byte LEVEL2_BGPAL_03 | LEVEL2_OBJPAL_08 | LEVEL2_XSTART_18
     .byte LEVEL3_TILESET_02 | LEVEL3_VSCROLL_LOCKED | LEVEL3_PIPENOTEXIT
     .byte 2 & %00011111 | LEVEL4_INITACT_NOTHING
