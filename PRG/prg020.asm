@@ -116,6 +116,14 @@ PRG020_A416:
     INY
     CPY #$f0
     BNE PRG020_A416
+	
+TS9_SkyStopGen:
+	LDA #TILE9_SKY_STOPGEN	; Stop palms from overflowing to top of screen
+	JSR Tile_Mem_ClearB
+	INY
+	CPY #$10
+	BNE TS9_SkyStopGen
+
 
     JMP LevelLoad   ; Begin actual level loading!
 
