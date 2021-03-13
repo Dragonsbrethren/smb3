@@ -4891,8 +4891,8 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/high2.chr"			;013
     .incbin "CHR/chr014.chr"
     .incbin "CHR/chr015.chr"
-    .incbin "CHR/chr016.chr"
-    .incbin "CHR/chr017.chr"
+    .incbin "CHR/fort1.chr"			;016
+    .incbin "CHR/fort2.chr"			;017
     .incbin "CHR/chr018.chr"
     .incbin "CHR/chr019.chr"
     .incbin "CHR/world1.chr"		;020
