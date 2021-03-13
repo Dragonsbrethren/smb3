@@ -102,27 +102,27 @@ Tile_Attributes_TS9:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 LevelLoad_TS9:
     LDY #$00
+	
+TS9_SkyStopGen:
+	LDA #TILE9_SKY_STOPGEN	; Stop palms from overflowing to top of screen
+	JSR Tile_Mem_ClearA
+	INY
+	CPY #$10
+	BNE TS9_SkyStopGen
 
-PRG020_A40A:
+TS9_Sky:
     LDA #TILE9_SKY
     JSR Tile_Mem_ClearB
     JSR Tile_Mem_ClearA
     CPY #$e0
-    BNE PRG020_A40A
+    BNE TS9_Sky
 
-PRG020_A416:
+TS9_Ground:
     LDA #TILE9_BRICK_UM ; Used as standard ground
     JSR Tile_Mem_ClearB
     INY
     CPY #$f0
-    BNE PRG020_A416
-	
-TS9_SkyStopGen:
-	LDA #TILE9_SKY_STOPGEN	; Stop palms from overflowing to top of screen
-	JSR Tile_Mem_ClearB
-	INY
-	CPY #$10
-	BNE TS9_SkyStopGen
+    BNE TS9_Ground
 
 
     JMP LevelLoad   ; Begin actual level loading!

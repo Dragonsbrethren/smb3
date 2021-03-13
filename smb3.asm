@@ -4271,7 +4271,7 @@ TILE9_PIPEWORKS_GROUND  = $E7   ; Pipeworks ground connection
 TILE9_CANNONTOP1    = $ED   ; Upper top of cannon
 TILE9_CANNONTOP2    = $EE   ; Lower top of cannon
 TILE9_CANNONMID     = $ED   ; Mid part to ground
-TILE9_SKY_STOPGEN   = $EF   ; Stops palms from overflowing
+TILE9_SKY_STOPGEN   = $FF   ; Stops palms from overflowing
 
 ; Tileset 10 (Airship)
 TILE10_SKY      = $06   ; Sky
