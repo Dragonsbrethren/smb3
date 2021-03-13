@@ -1,9 +1,1 @@
-    .byte $00   ; Unknown purpose
-
-    .byte OBJ_ROTODISCCLOCKWISE, $11, $14
-    .byte OBJ_GREENCHEEP, $17, $13
-    .byte OBJ_GREENCHEEP, $1F, $17
-    .byte OBJ_ROTODISCCLOCKWISE, $25, $14
-    .byte OBJ_GREENCHEEP, $29, $13
-    .byte OBJ_BOOMBOOMFLY, $5C, $28
-    .byte $FF   ; Terminator
+hex 01 5A 07 14 77 08 16 5A 10 11 77 11 13 5A 17 15 66 1E 15 66 25 15 66 2C 15 88 34 18 5B 34 15 88 43 13 99 57 14 4B 8C 18 FF

@@ -1,17 +1,10 @@
-; Original address was $AB0B
-; World 3 2nd Fortress parts 1 and 3
-    .word W3F2L ; Alternate level layout
-    .word W3F2O ; Alternate object layout
-    .byte LEVEL1_SIZE_06 | LEVEL1_YSTART_0F0
+; Fishy Fortress swim/frog/boss area
+    .word W3F2_AltL ; Alternate level layout
+    .word W3F2_AltO ; Alternate object layout
+    .byte LEVEL1_SIZE_09 | LEVEL1_YSTART_0F0
     .byte LEVEL2_BGPAL_03 | LEVEL2_OBJPAL_08 | LEVEL2_XSTART_18
     .byte LEVEL3_TILESET_02 | LEVEL3_VSCROLL_LOCKED | LEVEL3_PIPENOTEXIT
     .byte 2 & %00011111 | LEVEL4_INITACT_NOTHING
     .byte LEVEL5_BGM_FORTRESS | LEVEL5_TIME_300
 
-    .byte $19, $00, $E1, $5F, $4F, $00, $89, $0F, $0F, $00, $E1, $0F, $11, $00, $E2, $04
-    .byte $13, $07, $E5, $02, $34, $01, $D1, $16, $0A, $E0, $00, $17, $0A, $E0, $01, $18
-    .byte $0A, $E0, $02, $4F, $10, $89, $0F, $0F, $10, $E1, $0F, $14, $11, $02, $35, $1C
-    .byte $00, $4F, $20, $89, $0F, $0F, $20, $E1, $0F, $14, $25, $02, $34, $2E, $92, $17
-    .byte $28, $E0, $07, $18, $27, $E0, $08, $E2, $51, $02, $0F, $30, $E9, $0F, $6F, $40
-    .byte $3A, $1F, $0F, $40, $E0, $1F, $0F, $44, $E5, $0C, $16, $45, $62, $2F, $41, $D1
-    .byte $0F, $5F, $EB, $00, $14, $54, $E0, $00, $15, $5B, $E0, $00, $FF
+    hex 4F 00 8B 47 0F 01 E0 03 30 02 D2 0F 0A E1 11 35 17 00 11 46 E1 01 70 6E 39 20 0F 6E E0 20 0F 75 E5 0C 16 77 62 0F 8F EB 00 0F 05 E5 04 0F 00 EA 00 18 05 E1 04 14 07 02 15 0E E4 04 11 0E E0 04 11 10 02 1A 00 E0 1B 0F 1C E7 01 2F 1E D5 2F 25 D5 2F 2C D5 0F 20 E7 04 0F 27 E7 04 0F 2E E7 01 1A 30 E0 08 0F 30 E1 17 35 34 00 15 39 E5 04 16 3E E4 01 17 40 E3 05 35 46 E1 17 46 E3 01 11 43 E0 02 11 30 E0 01 1A 6E E0 20 6F 50 3B 0F 19 4F E1 10 0F 50 E0 10 0F 5E EB 0F 0F 48 EB 09 37 5B 91 30 53 D1 58 6E 21 14 54 60 13 86 71 14 5B 60 11 1A E0 01 19 13 E0 01 E4 73 F6 E5 50 20 FF
