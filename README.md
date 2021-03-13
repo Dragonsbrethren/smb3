@@ -1,9 +1,7 @@
-# smb3hack
-Source for SMB3 ROM hack
-Forked from disassembly of Super Mario Bros 3 for ASM6 by Drakim
+# Dragonsbrethren's SMB3 Hack
+Based on Drakim's ASM6 fork of Captain Southbird's SMB3 disassembly 
 (https://github.com/Drakim/smb3)
-
-Fork of Captah Southbird's disassembly (https://github.com/captainsouthbird/smb3)
+(https://github.com/captainsouthbird/smb3)
 
 -------------
 
