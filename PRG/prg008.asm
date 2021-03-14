@@ -666,24 +666,18 @@ LevelInit_EnableSlopes:
 
     LDA Level_Tileset
     CMP #3
-    BEQ PRG008_A347  ; If Level_Tileset = 3 (Hills style), jump to PRG008_A347
+    BEQ @SlopesOn  ; Grass Hills
 
     CMP #14
-    BEQ PRG008_A347  ; If Level_Tileset = 14 (Underground style), jump to PRG008_A347
+    BEQ @SlopesOn  ; Underground
 
-    CMP #$05
-    BNE PRG008_A345  ; If Level_Tileset = 5 (pipe world plant infestation style), jump to PRG008_A345
+    CMP #09
+    BEQ @SlopesOn  ; Desert
 
-    ; Level_Tileset = 5...
-
-    LDA Level_UnusedSlopesTS5   ; Never set, so this is unused...
-    CMP #$02
-    BEQ PRG008_A347  ; If Level_UnusedSlopesTS5 = 2, jump to PRG008_A347 (force slopes to be enabled on tileset 5)
-
-PRG008_A345:
+@SlopesOff:
     LDY #$00     ; Y = 0 (do not enable slopes)
 
-PRG008_A347:
+@SlopesOn:
     STY Level_SlopeEn
     RTS      ; Return
 
