@@ -9,7 +9,7 @@ W609_UnderL:    .include "PRG/levels/Hills/6-9Under.asm"    ; 6-9 underground
 W5HBA:      .include "PRG/levels/Hills/W5HBA.asm"       ; World 5 Hammer Bro ground battle A
 EmptyHills3L:   .include "PRG/levels/Hills/Empty3.asm"      ; Empty/unused 3
 W606_UnderL:    .include "PRG/levels/Hills/6-6Under.asm"    ; 6-6 Underground
-W102L:      .include "PRG/levels/Hills/1-2.asm"     ; 1-2
+; W102L:      .include "PRG/levels/Hills/1-2.asm"     ; 1-2
 Unused3L:   .include "PRG/levels/Hills/Unused3.asm"     ; "Unused level 3"
 W703L:      .include "PRG/levels/Hills/7-3.asm"     ; 7-3
 W1HBA:      .include "PRG/levels/Hills/W1HBA.asm"       ; World 1 Hammer Bro battle A
@@ -20,13 +20,3 @@ Unused4_InnerL: .include "PRG/levels/Hills/Unused4I.asm"    ; "Unused level 4" i
 W2STL:      .include "PRG/levels/Hills/SandTrap.asm"    ; World 2 Sand Trap
 W403_UnderL:    .include "PRG/levels/Hills/4-3Under.asm"    ; 4-3 Underground
 W202L:      .include "PRG/levels/Hills/2-2.asm"     ; 2-2
-
-	.word LoadLevel_IceBlocks       ; 45 - Run of ice blocks
-    .word LoadLevel_IceBlocks       ; 46 - Run of frozen munchers
-    .word LoadLevel_IceBlocks       ; 47 - Run of frozen coins
-    .word LoadLevel_DonutLifts      ; 48 - Run of donut lifts
-    .word LoadLevel_Conveyor        ; 49 - Run of left conveyor
-    .word LoadLevel_Conveyor        ; 50 - Run of right conveyor
-    .word LoadLevel_Jelectro        ; 51 - Run of solid black tiles
-    .word LoadLevel_LargeIceBlocks      ; 52 - Run of large 2x2 ice blocks
-    .word LoadLevel_LittleCloudRun      ; 53 - Put in a run of those little smiling Judgem's type clouds

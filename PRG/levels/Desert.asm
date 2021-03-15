@@ -18,3 +18,4 @@ W204L:      .include "PRG/levels/Desert/2-4.asm"        ; 2-4
 EmptyDesert3L:  .include "PRG/levels/Desert/Empty3.asm"     ; Empty/unused
 W202_ExitL: .include "PRG/levels/Desert/2-2Exit.asm"    ; 2-2 Exit pipe
 W203_ExitL: .include "PRG/levels/Desert/2-3Exit.asm"    ; 2-3 Exit pipe
+W102L:      .include "PRG/levels/Desert/1-2.asm"     ; 1-2
