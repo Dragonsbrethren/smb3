@@ -5851,6 +5851,9 @@ PRG030_9EC3:
     BEQ PRG030_9EDB  ; If Level_Tileset = 3 (Hills style), jump to PRG030_9EDB
 
     CPY #14
+	BEQ PRG030_9EDB
+	
+	CPY #9
     BNE PRG030_9F0D  ; If Level_Tileset <> 14 (Underground), jump to PRG030_9F0D
 
 PRG030_9EDB:

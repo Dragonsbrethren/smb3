@@ -671,7 +671,7 @@ LevelInit_EnableSlopes:
     CMP #14
     BEQ @SlopesOn  ; Underground
 
-    CMP #09
+    CMP #9
     BEQ @SlopesOn  ; Desert
 
 @SlopesOff:
@@ -4462,6 +4462,8 @@ PRG008_B47E:
     BEQ PRG008_B4A2  ; If Level_Tileset = 3 (Hills style), jump to PRG008_B4A2
     CMP #14
     BEQ PRG008_B4A2  ; If Level_Tileset = 14 (Underground style), jump to PRG008_B4A2
+	CMP #9
+    BEQ PRG008_B4A2	; Desert
 
     ; Non-sloped levels use this:
     ; SB: NOTE: I don't think this really means anything; this ends up pointing to

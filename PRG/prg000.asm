@@ -131,7 +131,7 @@ Level_MinTileUWByQuad:
     .byte $02, $3F, $8A, $C0    ;  6 water world
     .byte $FF, $FF, $FF, $DA    ;  7 Toad House
     .byte $FF, $FF, $8A, $DA    ;  8 Vertical pipe maze
-    .byte $FF, $FF, $FF, $DA    ;  9 desert levels
+    .byte $FF, $FF, $FF, $C1    ;  9 desert levels
     .byte $FF, $FF, $FF, $DA    ; 10 Airship
     .byte $FF, $FF, $FF, $DA    ; 11 Giant World
     .byte $FF, $FF, $FF, $DA    ; 12 Ice level
