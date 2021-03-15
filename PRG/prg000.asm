@@ -55,9 +55,11 @@ Level_SlopeQuad80:
     .byte $03, $03, $03, $03, $03, $03, $08
 
 Level_SlopeQuadC0:
-    ; Tile $E2+
-    .byte $01, $07, $02, $0C, $0D, $0E, $0F, $05, $06, $11, $12, $13, $14, $07, $03, $03
-    .byte $03, $03, $08, $07, $04, $07, $04, $04, $08, $08, $04
+    ; Tile $C0
+	.byte $01, $07, $02, $0C, $0D, $0E, $0F, $05, $06, $11, $12, $13, $14, $08, $07, $04
+    .byte $07, $04, $04, $08, $03, $03, $03, $03, $03, $03, $03, $03, $03, $03, $03, $03
+    .byte $03, $03, $01, $07, $02, $0C, $0D, $0E, $0F, $05, $06, $11, $12, $13, $14, $07
+	.byte $03, $03, $03, $03, $08, $07, $04, $07, $04, $04, $08, $08, $04
 
 Slope_LUT:
     ; Lower 4 bits are the ground slope height
@@ -557,34 +559,34 @@ MuncherJelectroSet:
     ; Bit 1 (2) = NOT able to slide on slopes
 PowerUp_Ability:
     ;     Small, Big, Fire, Leaf, Frog, Tanooki, Hammer
-    .byte $00,   $00, $00,  $01,  $02,  $01,     $02
+    .byte $00,   $00, $00,  $01,  $02,  $01,     $00
 
     ; Velocities set to X/Y directly to Player for what might be a now-unused debug routine of sorts
 PRG000_C3E7:
-    .byte $00, $30, -$30
+    ; .byte $00, $30, -$30
 
 ; FIXME: Anybody want to claim this?
 ; Looks like maybe a leftover debug routine for some kind of "float around" mode maybe!!
 ; $C3EA
-    LDA Pad_Holding
-    AND #PAD_LEFT | PAD_RIGHT
-    TAY      ; Y = 1 or 2
+    ;LDA Pad_Holding
+    ;AND #PAD_LEFT | PAD_RIGHT
+    ;TAY      ; Y = 1 or 2
 
     ; Set Player X velocity directly??
-    LDA PRG000_C3E7,Y
-    STA Player_XVel
+    ;LDA PRG000_C3E7,Y
+    ;STA Player_XVel
 
-    LDA Pad_Holding
-    LSR A
-    LSR A
-    AND #(PAD_UP | PAD_DOWN) >> 2
-    TAY      ; Y = 1 or 2
+    ;LDA Pad_Holding
+    ;LSR A
+    ;LSR A
+    ;AND #(PAD_UP | PAD_DOWN) >> 2
+    ;TAY      ; Y = 1 or 2
 
     ; Set Player Y velocity directly??
-    LDA PRG000_C3E7,Y
-    STA Player_YVel
+    ;LDA PRG000_C3E7,Y
+    ;STA Player_YVel
 
-    RTS      ; Return
+    ;RTS      ; Return
 
     ; Offsets into Sprite_RAM used by objects
 SprRamOffsets:
@@ -3191,14 +3193,14 @@ PRG000_CFA8:
 
 
     ; Unused space... deleted code?
-    NOP
-    NOP
-    NOP
-    NOP
-    NOP
-    NOP
-    NOP
-    NOP
+    ;NOP
+    ;NOP
+    ;NOP
+    ;NOP
+    ;NOP
+    ;NOP
+    ;NOP
+    ;NOP
 
 ObjState_Killed:
     JSR Object_FallAndDelete    ; Have object fall and delete if it gets too low (at which point we don't return)
@@ -5696,7 +5698,7 @@ Player_GetHurt:
     ORA Player_SuitLost     ; ... just lost a power-up suit ...
     ORA Player_HaltGame        ; ... gameplay halted ...
     ORA Player_HaltTick     ; ... Player halted ...
-    ORA Player_DebugNoHitFlag   ; ... debug invincibility flag is set (unused) ...
+    ; ORA Player_DebugNoHitFlag   ; ... debug invincibility flag is set (unused) ...
     BNE PRG000_D9B7  ; ... then jump to PRG000_D9B7 (RTS)
 
     JMP PRG000_DA15  ; Jump to PRG000_DA15 (skips lost/dead Japanese version code)
@@ -6787,7 +6789,7 @@ PRG000_DE03:
 
     LDA #$00
     STA Objects_XVelFrac    ; Objects_XVelFrac = 0
-    STA THouse_UnusedFlag   ; THouse_UnusedFlag = 0 (set here, never used otherwise)
+    ;STA THouse_UnusedFlag   ; THouse_UnusedFlag = 0 (set here, never used otherwise)
 
     LDA #$ff
     STA Objects_Timer    ; Objects_Timer = $FF
