@@ -1605,9 +1605,10 @@ PalSet_PipeMaze:
     .byte $FF, $16, $36, $0F, $FF, $30, $16, $0F, $FF, $2A, $3B, $0F, $FF, $17, $36, $26    ; SPR Pal 3 (11)
 
 PalSet_Desert:
-    .byte $22, $0F, $30, $3C, $22, $0F, $36, $27, $22, $0F, $27, $17, $22, $0F, $36, $14    ; BG Pal 0
+    ;.byte $22, $0F, $30, $3C, $22, $0F, $36, $27, $22, $0F, $27, $17, $22, $0F, $36, $14    ; BG Pal 0
+	hex 21 0F 30 3C  21 0F 30 36  21 0F 36 19  21 0F 36 3C ; BG Pal 0 - Tropical Island
     ;.byte $36, $0F, $30, $3C, $36, $0F, $36, $27, $36, $0F, $2A, $1A, $36, $0F, $31, $21    ; BG Pal 1
-	hex 21 0F 30 3C  21 0F 30 36  21 0F 2A 1A  21 0F 31 3C	; BG Pal 1 - Tropical Island
+	hex 21 0F 30 3C  21 0F 30 36  21 0F 36 1A  21 0F 36 3C	; BG Pal 1 - Tropical Island
     .byte $0F, $0F, $30, $3C, $0F, $0F, $30, $00, $0F, $0F, $1A, $0A, $0F, $0F, $31, $21    ; BG Pal 2
     .byte $0F, $0F, $30, $3C, $0F, $0F, $36, $27, $0F, $0F, $27, $17, $0F, $0F, $31, $21    ; BG Pal 3
     .byte $36, $0F, $30, $3C, $36, $0F, $36, $27, $36, $0F, $27, $17, $36, $0F, $31, $21    ; BG Pal 4
