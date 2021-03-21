@@ -4967,7 +4967,7 @@ Level_ActionTiles:
     .byte TILEA_QBLOCKFLOWER, TILEA_INVISCOIN, TILEA_NOTEINVIS
 
     ; And in the desert only... (UNUSED, would be a breakable tile in a pipeworks structure!)
-    ; .byte TILE9_PIPEWORKS_JCT
+    .byte TILE9_PIPEWORKS_JCT
 
     ; Hit Enable bits specify whether blocks can be hit horizontally
     ; vertically, or both!  While they can be somewhat refined to only
