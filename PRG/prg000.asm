@@ -504,7 +504,7 @@ SpikesEnable:
     .byte $FF   ;  5 water world
     .byte $FF   ;  6 Toad House
     .byte TILE8_SPIKE_UP    ;  7 Vertical pipe maze
-    .byte TILE9_SPIKEUP ;  8 desert levels
+    .byte $FF ;TILE9_SPIKEUP ;  8 desert levels
     .byte $FF   ;  9 Airship
     .byte $FF   ; 10 Giant World
     .byte $FF   ; 11 Ice level
