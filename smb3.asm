@@ -4211,7 +4211,7 @@ TILE8_BGPIPE_MHR    = $CE   ; Background pipe minipipe horizontal right
 
 
 ; Tileset 9 (desert)
-TILE9_SKY				= $03   ; Sky
+TILE9_SKY				= $02   ; Sky
 ;TILE9_THINGROUND_LEDGE  = $07   ; blue thin ground left edge (UNUSED?)
 ;TILE9_THINGROUND_REDGE  = $08   ; blue thin ground right edge (UNUSED?)
 ;TILE9_CLOUD_L       = $12   ; Cloud left
