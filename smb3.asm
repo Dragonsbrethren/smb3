@@ -4042,9 +4042,9 @@ TILE4_LONGWOOD_L    = $22 ;4A   ; Long wooden block, left
 TILE4_LONGWOOD_M    = $23 ;4B   ; Long wooden block, middle
 TILE4_LONGWOOD_R    = $24 ;4C   ; Long wooden block, right
 
-TILE4_MUSHROOM_L	= $22	; Large red mushroom cap, left
-TILE4_MUSHROOM_M	= $23	; Large red mushroom cap, middle
-TILE4_MUSHROOM_R	= $24   ; Large red mushroom cap, right
+TILE4_MUSHROOM_L    = $22   ; Large red mushroom cap, left
+TILE4_MUSHROOM_M    = $23   ; Large red mushroom cap, middle
+TILE4_MUSHROOM_R    = $24   ; Large red mushroom cap, right
 TILE4_LARGEWOOD_UL  = $4D   ; Large wooden block, upper left
 TILE4_LARGEWOOD_UM  = $4E   ; Large wooden block, upper middle
 TILE4_LARGEWOOD_UR  = $4F   ; Large wooden block, upper right
@@ -4211,7 +4211,6 @@ TILE8_BGPIPE_MHR    = $CE   ; Background pipe minipipe horizontal right
 
 
 ; Tileset 9 (desert)
-TILE9_SKY				= $02   ; Sky
 ;TILE9_THINGROUND_LEDGE  = $07   ; blue thin ground left edge (UNUSED?)
 ;TILE9_THINGROUND_REDGE  = $08   ; blue thin ground right edge (UNUSED?)
 ;TILE9_CLOUD_L       = $12   ; Cloud left
@@ -4235,6 +4234,7 @@ TILE9_SKY				= $02   ; Sky
 ;TILE9_SPIKEDOWN     = $7D   ; Spikes pointing downward
 ;TILE9_SPIKEUP       = $7E   ; Spikes pointing upward
 ;TILE9_BLOCK     = $7F   ; A simple orange block
+TILE9_SKY               = $80   ; Sky
 ;TILE9_BIGBLOCK_ML   = $81   ; Big block middle left
 ;TILE9_BIGBLOCK_MM   = $82   ; Big block middle middle
 ;TILE9_BIGBLOCK_MR   = $83   ; Big block middle right
@@ -4244,10 +4244,11 @@ TILE9_SKY				= $02   ; Sky
 ;TILE9_THINVBLOCK_B  = $88   ; Thin vertical block bottom
 ;TILE9_PYRAMIDSH_SLOPE   = $8B   ; Pyramid shaded sloped edge
 ;TILE9_PYRAMIDSH     = $8C   ; Pyramid shaded fill
-TILE9_TREETOP_LEFT		= $8F   ; Tree top left
+TILE9_SKY_STOPGEN       = $8E   ; Stops palms from overflowing
+TILE9_TREETOP_LEFT      = $8F   ; Tree top left
 TILE9_TREETOP_MIDDLE    = $90   ; Tree top middle
-TILE9_TREETOP_RIGHT		= $91   ; Tree top right
-TILE9_TREE				= $92   ; Tree trunk
+TILE9_TREETOP_RIGHT     = $91   ; Tree top right
+TILE9_TREE              = $92   ; Tree trunk
 ;TILE9_CACTUS        = $93   ; BG cactus
 ;TILE9_ALTBACKGROUND = $97   ; Alternate background?
 ;TILE9_BIGBLOCK_UL   = $98   ; Big block upper left
@@ -4269,7 +4270,6 @@ TILE9_TREE				= $92   ; Tree trunk
 ;TILE9_CANNONTOP1    = $ED   ; Upper top of cannon
 ;TILE9_CANNONTOP2    = $EE   ; Lower top of cannon
 ;TILE9_CANNONMID     = $ED   ; Mid part to ground
-TILE9_SKY_STOPGEN		= $FF   ; Stops palms from overflowing
 
 ; Tileset 10 (Airship)
 TILE10_SKY      = $06   ; Sky
@@ -4881,28 +4881,28 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr005.chr"
     .incbin "CHR/chr006.chr"
     .incbin "CHR/chr007.chr"
-    .incbin "CHR/plains1.chr"		;008
-    .incbin "CHR/plains2.chr"		;009
+    .incbin "CHR/plains1.chr"       ;008
+    .incbin "CHR/plains2.chr"       ;009
     .incbin "CHR/chr010.chr"
     .incbin "CHR/chr011.chr"
-    .incbin "CHR/high1.chr"			;012
-    .incbin "CHR/high2.chr"			;013
+    .incbin "CHR/high1.chr"         ;012
+    .incbin "CHR/high2.chr"         ;013
     .incbin "CHR/chr014.chr"
     .incbin "CHR/chr015.chr"
-    .incbin "CHR/fort1.chr"			;016
-    .incbin "CHR/fort2.chr"			;017
+    .incbin "CHR/fort1.chr"         ;016
+    .incbin "CHR/fort2.chr"         ;017
     .incbin "CHR/chr018.chr"
     .incbin "CHR/chr019.chr"
-    .incbin "CHR/world1.chr"		;020
-    .incbin "CHR/world2.chr"		;021
-    .incbin "CHR/world3.chr"		;022
-    .incbin "CHR/world4.chr"		;023
-    .incbin "CHR/ice1.chr"			;024
-    .incbin "CHR/ice2.chr"			;025
+    .incbin "CHR/world1.chr"        ;020
+    .incbin "CHR/world2.chr"        ;021
+    .incbin "CHR/world3.chr"        ;022
+    .incbin "CHR/world4.chr"        ;023
+    .incbin "CHR/ice1.chr"          ;024
+    .incbin "CHR/ice2.chr"          ;025
     .incbin "CHR/chr026.chr"
     .incbin "CHR/chr027.chr"
-    .incbin "CHR/cave1.chr"			;028
-    .incbin "CHR/cave2.chr"			;029
+    .incbin "CHR/cave1.chr"         ;028
+    .incbin "CHR/cave2.chr"         ;029
     .incbin "CHR/chr030.chr"
     .incbin "CHR/chr031.chr"
     .incbin "CHR/chr032.chr"
@@ -4921,8 +4921,8 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr045.chr"
     .incbin "CHR/chr046.chr"
     .incbin "CHR/chr047.chr"
-    .incbin "CHR/desert1.chr"		;048
-    .incbin "CHR/desert2.chr"		;049
+    .incbin "CHR/desert1.chr"       ;048
+    .incbin "CHR/desert2.chr"       ;049
     .incbin "CHR/chr050.chr"
     .incbin "CHR/chr051.chr"
     .incbin "CHR/chr052.chr"
@@ -4935,8 +4935,8 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr059.chr"
     .incbin "CHR/chr060.chr"
     .incbin "CHR/chr061.chr"
-    .incbin "CHR/anim1-1.chr"		;062
-    .incbin "CHR/anim2-1.chr"		;063
+    .incbin "CHR/anim1-1.chr"       ;062
+    .incbin "CHR/anim2-1.chr"       ;063
     .incbin "CHR/chr064.chr"
     .incbin "CHR/chr065.chr"
     .incbin "CHR/chr066.chr"
@@ -4961,28 +4961,28 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr085.chr"
     .incbin "CHR/chr086.chr"
     .incbin "CHR/chr087.chr"
-    .incbin "CHR/vertwater1.chr"	;088
-    .incbin "CHR/vertwater2.chr"	;089
+    .incbin "CHR/vertwater1.chr"    ;088
+    .incbin "CHR/vertwater2.chr"    ;089
     .incbin "CHR/chr090.chr"
     .incbin "CHR/chr091.chr"
-    .incbin "CHR/status1.chr"		;092
-    .incbin "CHR/status2.chr"		;093
-    .incbin "CHR/status3.chr"		;094
-    .incbin "CHR/status4.chr"		;095
-    .incbin "CHR/anim1-2.chr"		;096
-    .incbin "CHR/anim2-2.chr"		;097
-    .incbin "CHR/anim1-3.chr"		;098
-    .incbin "CHR/anim2-3.chr"		;099
-    .incbin "CHR/anim1-4.chr"		;100
-    .incbin "CHR/anim2-4.chr"		;101
-    .incbin "CHR/anim1-5.chr"		;102
-    .incbin "CHR/anim2-5.chr"		;103
-    .incbin "CHR/plains-alt1.chr"	;104
-    .incbin "CHR/plains-alt2.chr"	;105
+    .incbin "CHR/status1.chr"       ;092
+    .incbin "CHR/status2.chr"       ;093
+    .incbin "CHR/status3.chr"       ;094
+    .incbin "CHR/status4.chr"       ;095
+    .incbin "CHR/anim1-2.chr"       ;096
+    .incbin "CHR/anim2-2.chr"       ;097
+    .incbin "CHR/anim1-3.chr"       ;098
+    .incbin "CHR/anim2-3.chr"       ;099
+    .incbin "CHR/anim1-4.chr"       ;100
+    .incbin "CHR/anim2-4.chr"       ;101
+    .incbin "CHR/anim1-5.chr"       ;102
+    .incbin "CHR/anim2-5.chr"       ;103
+    .incbin "CHR/plains-alt1.chr"   ;104
+    .incbin "CHR/plains-alt2.chr"   ;105
     .incbin "CHR/chr106.chr"
     .incbin "CHR/chr107.chr"
-    .incbin "CHR/grass1.chr"		;108
-    .incbin "CHR/grass2.chr"		;109
+    .incbin "CHR/grass1.chr"        ;108
+    .incbin "CHR/grass2.chr"        ;109
     .incbin "CHR/chr110.chr"
     .incbin "CHR/chr111.chr"
     .incbin "CHR/chr112.chr"
