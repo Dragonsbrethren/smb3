@@ -1,3 +1,5 @@
+W201L:      .include "PRG/levels/Desert/2-1.asm"        ; Sun and Sandcastles
+W202L:      .include "PRG/levels/Desert/2-2.asm"        ; Lakitu's Lagoon
 W2PYL:      .include "PRG/levels/Desert/PyramidO.asm"   ; Pyramid entrance / bonus / exit
 W709_EndL:  .include "PRG/levels/Desert/7-9End.asm"     ; 7-9 Exit
 W702L:      .include "PRG/levels/Desert/7-2.asm"        ; 7-2
@@ -7,7 +9,6 @@ Unused8_EndL:   .include "PRG/levels/Desert/Unused8E.asm"   ; "Unused level 8" e
 EmptyDesert1L:  .include "PRG/levels/Desert/Empty1.asm"     ; Empty/unused
 EmptyDesert2L:  .include "PRG/levels/Desert/Empty2.asm"     ; Empty/unused
 W709L:      .include "PRG/levels/Desert/7-9.asm"        ; 7-9
-W201L:      .include "PRG/levels/Desert/2-1.asm"        ; 2-1
 W201_BonusL:    .include "PRG/levels/Desert/2-1Bonus.asm"   ; 2-1 Bonus area
 W205L:      .include "PRG/levels/Desert/2-5.asm"        ; 2-5
 W205_BonusL:    .include "PRG/levels/Desert/2-5Bonus.asm"   ; 2-5 Bonus area

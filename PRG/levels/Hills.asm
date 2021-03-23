@@ -19,4 +19,4 @@ Unused4L:   .include "PRG/levels/Hills/Unused4.asm"     ; "Unused level 4" Entra
 Unused4_InnerL: .include "PRG/levels/Hills/Unused4I.asm"    ; "Unused level 4" inner section
 W2STL:      .include "PRG/levels/Hills/SandTrap.asm"    ; World 2 Sand Trap
 W403_UnderL:    .include "PRG/levels/Hills/4-3Under.asm"    ; 4-3 Underground
-W202L:      .include "PRG/levels/Hills/2-2.asm"     ; 2-2
+; W202L:      .include "PRG/levels/Hills/2-2.asm"     ; 2-2

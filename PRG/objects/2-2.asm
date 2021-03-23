@@ -1,16 +1,2 @@
-    .byte $01   ; Unknown purpose
-
-    .byte OBJ_BONUSCONTROLLER, $00, $1E
-    .byte OBJ_GOOMBA, $0F, $15
-    .byte OBJ_GREENPIRANHA_FIRE, $13, $19
-    .byte OBJ_VENUSFIRETRAP, $26, $19
-    .byte OBJ_GREENCHEEP, $38, $17
-    .byte OBJ_WOODENPLAT_RIDER, $33, $14
-    .byte OBJ_FLYINGGREENPARATROOPA, $39, $13
-    .byte OBJ_GREENCHEEP, $48, $18
-    .byte OBJ_GREENCHEEP, $55, $17
-    .byte OBJ_GREENCHEEP, $5F, $18
-    .byte OBJ_GREENCHEEP, $67, $17
-    .byte OBJ_FLYINGGREENPARATROOPA, $60, $13
-    .byte OBJ_FLYINGGREENPARATROOPA, $69, $12
-    .byte $FF   ; Terminator
+; Lakitu's Lagoon    .byte $01   ; Unknown purpose
+hex 01 83 1A 11 43 26 18 43 2E 18 6C 39 17 6C 3B 18 B6 49 12 43 4B 19 B6 52 12 83 5D 11 43 61 18 43 6D 19 43 7F 19 43 90 19 6C 9E 16 B6 A8 10 77 AF 17 77 BB 18 6C CE 15 6C D0 17 6C D2 19 41 E8 15 FF
