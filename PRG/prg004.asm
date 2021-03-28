@@ -2980,13 +2980,13 @@ PRG004_AE35:
     ; Non-sloped level uses Spiny Egg instead
     LDA #OBJ_SPINYEGG
 
-    BGE PRG004_AE58  ; If Level_SlopeEn >= 0 (i.e. a level with slopes), jump to PRG004_AE58
+    ; BGE PRG004_AE58  ; If Level_SlopeEn >= 0 (i.e. a level with slopes), jump to PRG004_AE58
 
     ; Sloped level uses Green "Dud" Egg
-    LDA #$02
-    STA Objects_SprAttr,Y
+    ; LDA #$02
+    ; STA Objects_SprAttr,Y
 
-    LDA #OBJ_SPINYEGGDUD
+    ; LDA #OBJ_SPINYEGGDUD
 
 PRG004_AE58:
     STA Level_ObjectID,Y     ; Set appropriate drop object
