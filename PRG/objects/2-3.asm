@@ -1,19 +1,2 @@
-    .byte $00   ; Unknown purpose
-
-    .byte OBJ_FIRESNAKE, $0F, $13
-    .byte OBJ_REDTROOPA, $12, $17
-    .byte OBJ_FIRESNAKE, $29, $13
-    .byte OBJ_FIRESNAKE, $29, $19
-    .byte OBJ_FIRESNAKE, $47, $12
-    .byte OBJ_GREENTROOPA, $42, $17
-    .byte OBJ_GREENTROOPA, $48, $17
-    .byte OBJ_PILEDRIVER, $63, $13
-    .byte OBJ_GREENTROOPA, $62, $13
-    .byte OBJ_GREENTROOPA, $6F, $14
-    .byte OBJ_PILEDRIVER, $6C, $13
-    .byte OBJ_PILEDRIVER, $6C, $18
-    .byte OBJ_PILEDRIVER, $7D, $14
-    .byte OBJ_PILEDRIVER, $80, $17
-    .byte OBJ_GREENTROOPA, $8B, $13
-    .byte OBJ_GREENTROOPA, $8D, $13
-    .byte $FF   ; Terminator
+; Pipe Jungle
+hex 01 A2 0C 16 A2 11 15 6E 19 18 6E 1B 18 A6 1D 15 A0 25 16 A0 27 16 A0 29 16 A6 30 12 BB 35 18 3E 3B 19 B4 3F 18 3E 43 19 3E 4B 19 BB 53 18 70 62 16 70 65 15 68 6D 13 70 73 17 70 75 18 A6 80 15 9F 87 14 9F 8C 13 9F 90 14 A2 94 15 9F 95 13 3E 9E 1A 41 B8 15 6E B8 19 6E BD 19 FF

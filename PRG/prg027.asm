@@ -1609,7 +1609,8 @@ PalSet_Desert:
 	hex 21 0F 30 3C  21 0F 30 36  21 0F 36 19  21 0F 36 3C ; BG Pal 0 - Tropical Island
     ;.byte $36, $0F, $30, $3C, $36, $0F, $36, $27, $36, $0F, $2A, $1A, $36, $0F, $31, $21    ; BG Pal 1
 	hex 21 0F 30 3C  21 0F 30 36  21 0F 36 2A  21 0F 36 3C	; BG Pal 1 - Tropical Island
-    .byte $0F, $0F, $30, $3C, $0F, $0F, $30, $00, $0F, $0F, $1A, $0A, $0F, $0F, $31, $21    ; BG Pal 2
+    ; .byte $0F, $0F, $30, $3C, $0F, $0F, $30, $00, $0F, $0F, $1A, $0A, $0F, $0F, $31, $21    ; BG Pal 2
+	hex 29 0F 30 1B  29 0F 38 28  29 0F 38 1A  29 0F 38 3C  ; BG Pal 2 - Jungle Greens
     .byte $0F, $0F, $30, $3C, $0F, $0F, $36, $27, $0F, $0F, $27, $17, $0F, $0F, $31, $21    ; BG Pal 3
     .byte $36, $0F, $30, $3C, $36, $0F, $36, $27, $36, $0F, $27, $17, $36, $0F, $31, $21    ; BG Pal 4
     .byte $37, $0F, $30, $3C, $37, $0F, $36, $27, $37, $0F, $27, $17, $37, $0F, $31, $21    ; BG Pal 5
@@ -1618,8 +1619,9 @@ PalSet_Desert:
 
     .byte $FF, $16, $36, $0F, $FF, $0F, $30, $16, $FF, $0F, $30, $2A, $FF, $0F, $36, $27    ; SPR Pal 0 (8)
 	hex FF 16 36 0F  FF 0F 30 26  FF 0F 30 2A  FF 0F 30 36	; SPR Pal 1 - Tropical Island
-    .byte $FF, $16, $36, $0F, $FF, $0F, $30, $16, $FF, $0F, $36, $14, $FF, $0F, $36, $27    ; SPR Pal 1 (9)
-    .byte $FF, $16, $36, $0F, $FF, $0F, $30, $16, $FF, $0F, $17, $27, $FF, $0F, $36, $27    ; SPR Pal 2 (10)
+    ; .byte $FF, $16, $36, $0F, $FF, $0F, $30, $16, $FF, $0F, $36, $14, $FF, $0F, $36, $27    ; SPR Pal 1 (9)
+	hex FF 16 36 0F  FF 0F 30 15  FF 0F 30 19  FF 0F 30 28
+    ; .byte $FF, $16, $36, $0F, $FF, $0F, $30, $16, $FF, $0F, $17, $27, $FF, $0F, $36, $27    ; SPR Pal 2 (10)
     .byte $FF, $16, $36, $0F, $FF, $0C, $30, $16, $FF, $0C, $30, $2C, $FF, $0C, $30, $00    ; SPR Pal 3 (11)
 
 PalSet_Airship:
