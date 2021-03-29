@@ -1069,38 +1069,40 @@ PRG008_A523:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ; Palette colors per power up level -- first byte is never used!
 PowerUp_Palettes:
-    ; .byte $00, $16, $36, $0F    ; 0 - Mario default palette
-    .byte $00, $16, $36, $01	; Mario in Blue
-	; .byte $00, $2A, $36, $0F    ; 1 - Luigi default palette
-	.byte $00, $2A, $36, $02	; Luigi in Blue
-    ; .byte $00, $27, $36, $16    ; 2 - Fire Flower
-	.byte $00, $30, $36, $06	; Darker Red + White
-    ; .byte $00, $00, $00, $00    ; 3 - Leaf (Not used, uses 0 or 1 as appropriate)
-	.byte $00, $30, $36, $1A	; Luigi Fire Palette
+    .byte $00, $16, $36, $01    ; 0 - Mario default palette
+	.byte $00, $2A, $36, $01    ; 1 - Luigi default palette
+    .byte $00, $30, $36, $06    ; 2 - Fire Flower
+	.byte $00, $30, $36, $0A	; 3 - Luigi Fire Palette
     .byte $00, $2A, $36, $0F    ; 4 - Frog Suit
     .byte $00, $17, $36, $0F    ; 5 - Tanooki Suit
-    ; .byte $00, $30, $27, $0F    ; 6 - Hammer Suit
-	.byte $00, $30, $36, $0F	; Fixed Skintone
+    .byte $00, $30, $36, $0F    ; 6 - Hammer Suit
     .byte $00, $00, $10, $0F    ; 7 - Tanooki Statue
 
 Level_SetPlayerPUpPal:
     LDY #$07     ; Y = 7 (select statue palette)
     LDA Player_Statue
-    BNE PRG008_A55E  ; If Player is statue, jump to PRG008_A55E
+    BNE @UpdatePlayerPal  ; If Player is statue, jump to PRG008_A55E
 
     LDA Player_Suit
     TAY      ; Y = Player_Suit
-    CMP #PLAYERSUIT_RACCOON
-    BEQ PRG008_A55B  ; If Player_Suit = PLAYERSUIT_RACCOON, jump to PRG008_A55B
-
+	CMP #PLAYERSUIT_FROG
+    BCS @UpdatePlayerPal  ; No special handling if Frog or greater
     CMP #PLAYERSUIT_FIRE
-    BGS PRG008_A55E  ; If Player_Suit >= PLAYERSUIT_FIRE, jump to PRG008_A55E
+	BNE @LoadDefault      ; Player isn't Fire Mario/Luigi, load default palette
+	
+	@FirePalette
+		LDA Player_Current
+		CMP #$00        ; Is the player Mario?
+		BEQ @UpdatePlayerPal
+		LDY #$03	    ; Player is Luigi, load his Fire palette
+		JMP @UpdatePlayerPal
+	
 
-PRG008_A55B:
-    ; If Player_Suit is 0 (small) or 1 (big), we load Y = Player_Current instead!
-    LDY Player_Current
+	@LoadDefault:
+		; If Player_Suit is 0 (small), 1 (big), or 3(raccoon) we load Y = Player_Current instead!
+		LDY Player_Current
 
-PRG008_A55E:
+@UpdatePlayerPal:
     LDX Graphics_BufCnt
     TXA
     CLC
