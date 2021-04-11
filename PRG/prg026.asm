@@ -158,7 +158,7 @@ PRG026_A11D:
     CPY #$08
     BNE PRG026_A11D     ; While Y < 8, loop!
 
-    LDY #$3c        ; Y = $3C (Closed cyan color)
+	LDY Map_Status_Backup	; Preserved status bar color from PRG027
     LDX Graphics_BufCnt ; X = Graphics_BufCnt
     LDA Inventory_Open  ; A = Inventory_Open
     BEQ PRG026_A135     ; If Inventory_Open = 0, jump to PRG026_A135
@@ -167,7 +167,7 @@ PRG026_A11D:
     LDY #$36        ; Y = $36 (Inventory_Open salmon color)
 
 PRG026_A135:
-    TYA         ; A = Y
+    TYA         ; A = status bar color
     STA Graphics_Buffer+6,X ; Store the color into the graphics buffer
     STA Palette_Buffer+3    ; And also the CURRENT palette buffer
     STA Pal_Data+3      ; And also the MASTER palette buffer

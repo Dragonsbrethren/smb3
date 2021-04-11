@@ -2101,7 +2101,7 @@ OBJSTATE_POOFDEATH  = 8 ; "Poof" Death (e.g. Piranha death)
 
     World_Map_Power:    .dsb 2   ; $0746-$0747 (Mario/Luigi) MAP Power up # (1 - big, 2 - Fire, 3 - Leaf, 4 - Frog, 5 - Tanooki, 6 - Hammer, 7 - Judgems, 8 - Pwing, 9 - Star)
 
-                .dsb 1   ; $0748 unused
+    Map_Status_Backup   .dsb 1   ; $0748 Map status bar color preservation
 
     Map_Unused749:      .dsb 2   ; $0749-$074A (Mario/Luigi) ? Another value just set once and never read back!
 

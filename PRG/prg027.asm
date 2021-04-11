@@ -1924,7 +1924,32 @@ PRG027_B8D9:
     STA Pal_Data+17     ; Store it!
 
 PRG027_B8F9:
-    RTS      ; Return
+	; Change the status bar to green if playing as Luigi
+	LDA Player_Current
+	CMP #$00			; Are we playing as Mario?
+	BEQ @Mario			; If yes, bypass the palette change
+	LDX #$19			; Green
+	; Are we using a tileset that can be overwritten?
+	LDA Level_Tileset
+	CMP #$00			; World Map
+	BEQ @GreenBar
+	CMP #$01			; Plains
+	BEQ @GreenBar
+	CMP #$04			; High Up
+	BEQ @GreenBar
+	
+	; Either we're Mario or this color set can't be overwritten
+	@Mario
+		LDA Pal_Data+3			; Regardless of whether we changed this color...
+		STA Map_Status_Backup	; ...preserve it in RAM for inventory in PRG026
+		RTS      ; Return
+		
+	@GreenBar
+	LDA PalSel_Tile_Colors
+	CMP #$01			; Only works with BG pal 0 (for now)
+	BCS @Mario
+	STX Pal_Data+3		; Overwrite status bar color
+	JMP @Mario
 
 
 Palette_PrepareFadeInTK:
