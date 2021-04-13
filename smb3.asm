@@ -4038,9 +4038,9 @@ TILE4_LONGCLOUD_LR  = $21   ; Long cloud lower right
 
 TILE4_FATTRUNK      = $47   ; Fat trunk (?) tile
 
-TILE4_LONGWOOD_L    = $22 ;4A   ; Long wooden block, left
-TILE4_LONGWOOD_M    = $23 ;4B   ; Long wooden block, middle
-TILE4_LONGWOOD_R    = $24 ;4C   ; Long wooden block, right
+TILE4_LONGWOOD_L    = $4A   ; Long wooden block, left
+TILE4_LONGWOOD_M    = $4B   ; Long wooden block, middle
+TILE4_LONGWOOD_R    = $4C   ; Long wooden block, right
 
 TILE4_MUSHROOM_L    = $22   ; Large red mushroom cap, left
 TILE4_MUSHROOM_M    = $23   ; Large red mushroom cap, middle
