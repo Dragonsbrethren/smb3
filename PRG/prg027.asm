@@ -1530,7 +1530,8 @@ PalSet_HillsUnder:
     .byte $FF, $16, $36, $0F, $FF, $1A, $27, $0F, $FF, $30, $36, $0F, $FF, $16, $30, $0F    ; SPR Pal 3 (11)
 
 PalSet_HighUp:
-    .byte $3C, $0F, $30, $16, $3C, $0F, $36, $27, $3C, $0F, $2A, $1A, $3C, $0F, $30, $21    ; BG Pal 0
+    ; .byte $3C, $0F, $30, $16, $3C, $0F, $36, $27, $3C, $0F, $2A, $1A, $3C, $0F, $30, $21  ; BG Pal 0
+	hex 22 0F 30 16  3C 0F 36 17  3C 0F 2A 1A  3C 0F 31 21    								; BG Pal 0
     .byte $37, $0F, $30, $16, $37, $0F, $36, $27, $37, $0F, $2B, $1A, $37, $0F, $30, $21    ; BG Pal 1
     .byte $02, $0F, $30, $16, $02, $0F, $25, $24, $02, $0F, $3A, $24, $02, $0F, $26, $24    ; BG Pal 2
     .byte $0F, $0F, $30, $16, $0F, $30, $0F, $0F, $0F, $30, $0F, $0F, $0F, $30, $0F, $0F    ; BG Pal 3
@@ -1924,32 +1925,51 @@ PRG027_B8D9:
     STA Pal_Data+17     ; Store it!
 
 PRG027_B8F9:
-	; Change the status bar to green if playing as Luigi
+	; Change the status bar to green if it is red and we're playing as Luigi
+	LDA Pal_Data+3		; Status bar main color
+	CMP #$16			; Red
+	BNE @SaveBar
 	LDA Player_Current
-	CMP #$00			; Are we playing as Mario?
-	BEQ @Mario			; If yes, bypass the palette change
-	LDX #$19			; Green
+	CMP #$01			; Playing as Luigi?
+	BNE @SaveBar
+	
+	; Status bar is red and playing as Luigi - make it green instead
+	@GreenBar
+		LDA #$19			; Green
+		STA Pal_Data+3
+	
+	; Preserve status bar color in RAM for inventory in PRG026
+	@SaveBar
+		STA Map_Status_Backup
+		
+	
+	RTS
+		
+	; LDA Player_Current
+	;CMP #$00			; Are we playing as Mario?
+	;BEQ @Mario			; If yes, bypass the palette change
+	;LDX #$19			; Green
 	; Are we using a tileset that can be overwritten?
-	LDA Level_Tileset
-	CMP #$00			; World Map
-	BEQ @GreenBar
-	CMP #$01			; Plains
-	BEQ @GreenBar
-	CMP #$04			; High Up
-	BEQ @GreenBar
+	;LDA Level_Tileset
+	;CMP #$00			; World Map
+	;BEQ @GreenBar
+	;CMP #$01			; Plains
+	;BEQ @GreenBar
+	;CMP #$04			; High Up
+	;BEQ @GreenBar
 	
 	; Either we're Mario or this color set can't be overwritten
-	@Mario
-		LDA Pal_Data+3			; Regardless of whether we changed this color...
-		STA Map_Status_Backup	; ...preserve it in RAM for inventory in PRG026
-		RTS      ; Return
-		
-	@GreenBar
-	LDA PalSel_Tile_Colors
-	CMP #$01			; Only works with BG pal 0 (for now)
-	BCS @Mario
-	STX Pal_Data+3		; Overwrite status bar color
-	JMP @Mario
+	;@Mario
+	;	LDA Pal_Data+3			; Regardless of whether we changed this color...
+	;	STA Map_Status_Backup	; ...preserve it in RAM for inventory in PRG026
+	;	RTS      ; Return
+	;	
+	;@GreenBar
+	;LDA PalSel_Tile_Colors
+	;CMP #$01			; Only works with BG pal 0 (for now)
+	;BCS @Mario
+	;STX Pal_Data+3		; Overwrite status bar color
+	;JMP @Mario
 
 
 Palette_PrepareFadeInTK:
