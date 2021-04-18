@@ -1463,7 +1463,7 @@ PRG027_ABD1:
 
 PalSet_Maps:
     ; Refer to Map_Tile_ColorSets and Map_Object_ColorSets in PRG012 to change these selections
-    .byte $0F, $0F, $30, $3C, $0F, $36, $27, $37, $0F, $21, $2A, $37, $0F, $30, $16, $37    ; World 1, 3
+    .byte $0F, $0F, $30, $16, $0F, $36, $27, $37, $0F, $21, $2A, $37, $0F, $30, $16, $37    ; World 1, 3
     .byte $0F, $0F, $30, $3C, $0F, $36, $27, $28, $0F, $12, $2A, $28, $0F, $30, $16, $28    ; World 2
     .byte $0F, $0F, $30, $3C, $0F, $36, $27, $21, $0F, $21, $10, $37, $0F, $21, $10, $37    ; World 9
     .byte $0F, $0F, $30, $3C, $0F, $36, $27, $3A, $0F, $12, $2A, $3A, $0F, $30, $16, $3A    ; World 4
@@ -1929,8 +1929,8 @@ PRG027_B8F9:
 	LDA Pal_Data+3		; Status bar main color
 	CMP #$16			; Red
 	BNE @SaveBar
-	LDA Player_Current
-	CMP #$01			; Playing as Luigi?
+	LDX Player_Current
+	CPX #$01			; Playing as Luigi?
 	BNE @SaveBar
 	
 	; Status bar is red and playing as Luigi - make it green instead
