@@ -1941,7 +1941,6 @@ PRG027_B8F9:
 	; Preserve status bar color in RAM for inventory in PRG026
 	@SaveBar
 		STA Map_Status_Backup
-		
 	
 	RTS
 		
