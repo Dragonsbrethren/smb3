@@ -859,7 +859,7 @@ PRG003_A471:
     JSR Object_AboutFace     ; Turn around
 
 PRG003_A47A:
-    JSR Object_ShakeAndDrawMirrored  ; Draw the Piledriver
+    JSR Object_ShakeAndDraw  ; Draw the Piledriver
 
     ; Add little Microgoomba sticking out the bottom
     LDA Sprite_RAM+$00,Y

@@ -4208,6 +4208,10 @@ TILE8_BGPIPE_MVB    = $CB   ; Background pipe minipipe vertical bottom
 TILE8_BGPIPE_MHL    = $CC   ; Background pipe minipipe horizontal left
 TILE8_BGPIPE_MHM    = $CD   ; Background pipe minipipe horizontal middle
 TILE8_BGPIPE_MHR    = $CE   ; Background pipe minipipe horizontal right
+TILE8_BRICK				= $EC	; Blue Brick
+TILE8_BRICKCOIN			= $ED
+TILE8_WOODBLOCKB		= $EE
+TILE8_WOODBLOCKBOUNCE	= $EE
 
 
 ; Tileset 9 (desert)
@@ -4877,7 +4881,7 @@ TILE18_BOUNCEDBLOCK = $C2   ; Temporary tile for when block has been bounced
     .incbin "CHR/chr001.chr"
     .incbin "CHR/chr002.chr"
     .incbin "CHR/chr003.chr"
-    .incbin "CHR/chr004.chr"
+    .incbin "CHR/spr_bounce.chr"	;004
     .incbin "CHR/chr005.chr"
     .incbin "CHR/chr006.chr"
     .incbin "CHR/chr007.chr"
